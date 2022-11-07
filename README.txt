@@ -25,9 +25,9 @@ Support:
     If you have any issues, questions, or need help setting up the script, join our Discord server and open a support ticket.
 
 Credits:
-    InteractSound: [Scott](https://forum.cfx.re/t/release-play-custom-sounds-for-interactions/8282)
-    Emergency Alert System: [LGDevelopment](https://forum.cfx.re/t/emergency-alert-system-a-k-a-ear-assault-system)
-    Earth Quake: [Critical Scripts](https://github.com/criticalscripts-shop/cs-earthquake)
+    InteractSound: Scott (https://forum.cfx.re/t/release-play-custom-sounds-for-interactions/8282)
+    Emergency Alert System: LGDevelopment (https://forum.cfx.re/t/emergency-alert-system-a-k-a-ear-assault-system)
+    Earth Quake: Critical Scripts (https://github.com/criticalscripts-shop/cs-earthquake)
 
 Links:
     Support Discord: https://discord.gg/DEQ95eVmQ3
