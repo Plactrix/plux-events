@@ -10,27 +10,27 @@ Config.AcePermission = "command.event" -- The ace permission for the specified c
 Config.Alerts = {
     enabled = true,
     commandName = "alert",
-	departments = {
-		LSPD = { name = "Los Santos Police Department" },
+    departments = {
+        LSPD = { name = "Los Santos Police Department" },
         BCSO = { name = "Blaine County Sheriff's Office" },
-		SAST = { name = "San Andreas State Police" },
-		SANG = { name = "San Andreas National Guard" },
-		USGVT = { name = "United States Government" },
+        SAST = { name = "San Andreas State Police" },
+        SANG = { name = "San Andreas National Guard" },
+        USGVT = { name = "United States Government" },
         SCP = { name = "SCP Foundation" }
     }
 }
 
 -- The Purge Event
 Config.ThePurge = {
-	enabled = true,
-	audioFile = "thepurge",
+    enabled = true,
+    audioFile = "thepurge",
     alertDept = "USGVT"
 }
 
 -- Earth Quake Event
 Config.EarthQuake = {
-	enabled = true,
-	effect = "SKY_DIVING_SHAKE",
+    enabled = true,
+    effect = "SKY_DIVING_SHAKE",
     audioFile = "earthquake",
     alertDept = "USGVT",
     buildUpMs = 60000,
@@ -45,10 +45,10 @@ Config.EarthQuake = {
 
 Config.Language = {
     -- General
-	nopermission = "ERROR: No Permission",
+    nopermission = "ERROR: No Permission",
     invalidargs = "Invalid Arguements. Please use %s",
     -- The Purge
-	purgealertmsg = "This is not a test. This is your emergency broadcast system announcing the commencement of the Annual Purge sanctioned by the U.S. Government. Weapons of class 4 and lower have been authorized for use during the Purge. All other weapons are restricted. Government officials of ranking 10 have been granted immunity from the Purge and shall not be harmed. Commencing at the siren, any and all crime, including murder, will be legal for 12 continuous hours. Police, fire, and emergency medical services will be unavailable until tomorrow morning until 7 a.m., when The Purge concludes. Blessed be our New Founding Fathers and America, a nation reborn. May God be with you all.",
+    purgealertmsg = "This is not a test. This is your emergency broadcast system announcing the commencement of the Annual Purge sanctioned by the U.S. Government. Weapons of class 4 and lower have been authorized for use during the Purge. All other weapons are restricted. Government officials of ranking 10 have been granted immunity from the Purge and shall not be harmed. Commencing at the siren, any and all crime, including murder, will be legal for 12 continuous hours. Police, fire, and emergency medical services will be unavailable until tomorrow morning until 7 a.m., when The Purge concludes. Blessed be our New Founding Fathers and America, a nation reborn. May God be with you all.",
     purgeactivated = "You have successfully activated the purge!",
     -- Earthquake
     earthquakealertmsg = "This is not a test. San Andreas is currently under a heavy earthquake. Please remain inside your home at all times.",
