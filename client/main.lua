@@ -1,7 +1,7 @@
 -- Events
 RegisterNetEvent("plux-events:client:sendAlert")
 AddEventHandler("plux-events:client:sendAlert", function(msg, msg2, eventalert)
-	if eventalert then
+    if eventalert then
         SendNUIMessage({
             type    = "alert",
             enable  = true,
@@ -9,7 +9,7 @@ AddEventHandler("plux-events:client:sendAlert", function(msg, msg2, eventalert)
             message = msg2,
             volume  = 0.0
         })
-	else
+    else
         SendNUIMessage({
             type    = "alert",
             enable  = true,
@@ -17,14 +17,14 @@ AddEventHandler("plux-events:client:sendAlert", function(msg, msg2, eventalert)
             message = msg2,
             volume  = Config.defaultVolume
         })
-	end
+    end
 end)
 
 RegisterNetEvent("plux-events:client:typeAlert")
 AddEventHandler("plux-events:client:typeAlert", function(msg, departments, eventalert)
-	if eventalert then
-		TriggerServerEvent("plux-events:server:syncAlert", Config.Alerts.departments[departments].name, msg, true)
-	else
+    if eventalert then
+        TriggerServerEvent("plux-events:server:syncAlert", Config.Alerts.departments[departments].name, msg, true)
+    else
         for i, v in pairs(departments) do
             if msg == i then
                 DisplayOnscreenKeyboard(1, "Message to Alert", "", "", "", "", "", 600)
@@ -39,14 +39,14 @@ AddEventHandler("plux-events:client:typeAlert", function(msg, departments, event
                 end
             end
         end
-	end
+    end
 end)
 
 RegisterNetEvent("plux-events:client:Notify")
 AddEventHandler("plux-events:client:Notify", function(string)
-	SetNotificationTextEntry("STRING")
-	AddTextComponentSubstringPlayerName(string)
-	DrawNotification(true, true)
+    SetNotificationTextEntry("STRING")
+    AddTextComponentSubstringPlayerName(string)
+    DrawNotification(true, true)
 end)
 
 RegisterNetEvent("plux-events:client:playSound")
@@ -61,10 +61,10 @@ end)
 local earthquaking = false
 RegisterNetEvent("plux-events:client:startEarthQuake")
 AddEventHandler("plux-events:client:startEarthQuake", function()
-	if earthquaking then
-		return
-	end
-	earthquaking = true
+    if earthquaking then
+        return
+    end
+    earthquaking = true
     local activeMs = 0
     local intensity = Config.EarthQuake.intensity.min
     local totalDurationMs = Config.EarthQuake.buildUpMs + Config.EarthQuake.wearOffMs
@@ -92,21 +92,21 @@ end)
 
 -- Threads
 CreateThread(function()
-	TriggerEvent("chat:addSuggestion", "/" .. Config.commandName, "Used for server events", {
-    	{ name="Event", help="List of Events: purge, earthquake" }
-	})
-	TriggerEvent("chat:addSuggestion", "/" .. Config.Alerts.commandName, "Used for alerting for server events", {
-    	{ name="Department", help="Example: USVG" }
-	})
+    TriggerEvent("chat:addSuggestion", "/" .. Config.commandName, "Used for server events", {
+        { name="Event", help="List of Events: purge, earthquake" }
+    })
+    TriggerEvent("chat:addSuggestion", "/" .. Config.Alerts.commandName, "Used for alerting for server events", {
+        { name="Department", help="Example: USVG" }
+    })
 end)
 
 -- Functions
 function Notify(string, type)
-	if Config.UseMythicNotify then
-		exports['mythic_notify']:SendAlert(type, string, 2580, { ["color"] = "#ffffff" })
-	else
-		SetNotificationTextEntry("STRING")
-		AddTextComponentSubstringPlayerName(string)
-		DrawNotification(true, true)
-	end
+    if Config.UseMythicNotify then
+        exports["mythic_notify"]:SendAlert(type, string, 2580, { ["color"] = "#ffffff" })
+    else
+        SetNotificationTextEntry("STRING")
+        AddTextComponentSubstringPlayerName(string)
+        DrawNotification(true, true)
+    end
 end
