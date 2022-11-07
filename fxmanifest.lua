@@ -6,12 +6,12 @@ description "A script used for Event Nights on FiveM"
 version "1.0.0"
 
 files {
-	"html/sounds/*.ogg",
+    "html/sounds/*.ogg",
     "html/css/*.css",
     "html/js/*.js",
     "html/mp3/*.mp3",
     "html/fonts/*.*",
-	"html/index.html"
+    "html/index.html"
 }
 
 ui_page "html/index.html"
